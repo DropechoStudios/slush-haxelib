@@ -35,16 +35,16 @@ To find out more about Slush, check out the [documentation](https://github.com/s
 
 ## Contributing
 
-See the [CONTRIBUTING Guidelines](https://github.com/vantreeseba/slush-haxelib/blob/master/CONTRIBUTING.md)
+See the [CONTRIBUTING Guidelines](https://github.com/DropechoStudios/slush-haxelib/blob/master/CONTRIBUTING.md)
 
 ## Support
-If you have any problem or suggestion please open an issue [here](https://github.com/vantreeseba/slush-haxelib/issues).
+If you have any problem or suggestion please open an issue [here](https://github.com/DropechoStudios/slush-haxelib/issues).
 
 ## License
 
 The MIT License
 
-Copyright (c) 2015, Ben Van Treese
+Copyright (c) 2015, Dropecho Studios
 
 Permission is hereby granted, free of charge, to any person
 obtaining a copy of this software and associated documentation

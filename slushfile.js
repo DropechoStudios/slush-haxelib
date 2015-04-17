@@ -13,6 +13,7 @@ var gulp = require('gulp'),
     conflict = require('gulp-conflict'),
     template = require('gulp-template'),
     rename = require('gulp-rename'),
+    path = require('path'),
     _ = require('underscore.string'),
     inquirer = require('inquirer');
 
@@ -71,8 +72,14 @@ gulp.task('default', function (done) {
         default: defaults.authorEmail
     }, {
         name: 'userName',
-        message: 'What is the github username?',
+        message: 'What is the github username/organization name?',
         default: defaults.userName
+    }, {
+        type: 'list',
+        name: 'license',
+        message: 'Choose your license type',
+        choices: ['MIT','BSD'],
+        default: 'MIT'
     }, {
         type: 'confirm',
         name: 'moveon',

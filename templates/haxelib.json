@@ -1,0 +1,10 @@
+{
+    "name": "<%= appNameSlug %>",
+    "url": "https://github.com/<%= userName %>/<%= appNameSlug %>",
+    "license":"<%= license %>",
+    "tags": [""]
+    "description": "<%= appDescription %>",
+    "version": "<%= appVersion %>",
+    "contributors": ["<%= authorName %>"],
+    "dependencies": {},
+}

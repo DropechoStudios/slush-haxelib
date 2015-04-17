@@ -1,4 +1,4 @@
-# Slush-haxelib [![Build Status](https://secure.travis-ci.org/vantreeseba/slush-haxelib.png?branch=master)](https://travis-ci.org/vantreeseba/slush-haxelib) [![NPM version](https://badge-me.herokuapp.com/api/npm/slush-haxelib.png)](http://badges.enytc.com/for/npm/slush-haxelib)
+# Slush-haxelib [![Build Status](https://secure.travis-ci.org/DropechoStudios/slush-haxelib.png?branch=master)](https://travis-ci.org/vantreeseba/slush-haxelib) [![NPM version](https://badge-me.herokuapp.com/api/npm/slush-haxelib.png)](http://badges.enytc.com/for/npm/slush-haxelib)
 
 > A generator for creating haxelib projects for both haxelib.org and npm.js
 

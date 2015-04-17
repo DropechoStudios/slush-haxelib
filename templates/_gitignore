@@ -1,4 +1,5 @@
 node_modules/
-temp
-*.log
-.idea
+artifacts
+*.swp
+.temp
+node_modules

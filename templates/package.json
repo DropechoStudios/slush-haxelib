@@ -18,15 +18,17 @@
         "type" : "<%= license %>",
         "url" : "https://github.com/<% userName %>/<% appNameSlug %>/blob/master/LICENSE"
     }],
-    "main": "slushfile.js",
-    "engines": {
-        "node": ">= 0.10.26",
-        "npm": ">=1.4.3"
-    },
+    "main": "artifacts/<%= appNameSlug %>.js",
     "scripts": {
-        "test": "echo \"No tests\""
+        "build": "gulp build",
+        "test": "gulp test"
     },
     "dependencies": {
+    },
+    "devDependencies": {
+        "gulp":"*",
+        "gulp-shell":"*",
+        "mkdirp":"*"
     },
     "keywords": [
         "slushgenerator"

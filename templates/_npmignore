@@ -1,8 +1,5 @@
-node_modules
-temp
-*.log
-.idea
-
+*
+!/artifacts/js/*
 
 # don't ignore .npmignore files
 !.npmignore

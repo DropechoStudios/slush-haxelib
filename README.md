@@ -1,14 +1,14 @@
-# Slush Slush-haxelib [![Build Status](https://secure.travis-ci.org/vantreeseba/slush-slush-haxelib.png?branch=master)](https://travis-ci.org/vantreeseba/slush-slush-haxelib) [![NPM version](https://badge-me.herokuapp.com/api/npm/slush-slush-haxelib.png)](http://badges.enytc.com/for/npm/slush-slush-haxelib)
+# Slush-haxelib [![Build Status](https://secure.travis-ci.org/vantreeseba/slush-haxelib.png?branch=master)](https://travis-ci.org/vantreeseba/slush-haxelib) [![NPM version](https://badge-me.herokuapp.com/api/npm/slush-haxelib.png)](http://badges.enytc.com/for/npm/slush-haxelib)
 
 > A generator for creating haxelib projects for both haxelib.org and npm.js
 
 
 ## Getting Started
 
-Install `slush-slush-haxelib` globally:
+Install `slush-haxelib` globally:
 
 ```bash
-$ npm install -g slush-slush-haxelib
+$ npm install -g slush-haxelib
 ```
 
 ### Usage
@@ -16,13 +16,13 @@ $ npm install -g slush-slush-haxelib
 Create a new folder for your project:
 
 ```bash
-$ mkdir my-slush-slush-haxelib
+$ mkdir my-slush-haxelib
 ```
 
 Run the generator from within the new folder:
 
 ```bash
-$ cd my-slush-slush-haxelib && slush slush-haxelib
+$ cd my-slush-haxelib && slush slush-haxelib
 ```
 
 ## Getting To Know Slush
@@ -35,12 +35,12 @@ To find out more about Slush, check out the [documentation](https://github.com/s
 
 ## Contributing
 
-See the [CONTRIBUTING Guidelines](https://github.com/vantreeseba/slush-slush-haxelib/blob/master/CONTRIBUTING.md)
+See the [CONTRIBUTING Guidelines](https://github.com/vantreeseba/slush-haxelib/blob/master/CONTRIBUTING.md)
 
 ## Support
-If you have any problem or suggestion please open an issue [here](https://github.com/vantreeseba/slush-slush-haxelib/issues).
+If you have any problem or suggestion please open an issue [here](https://github.com/vantreeseba/slush-haxelib/issues).
 
-## License 
+## License
 
 The MIT License
 

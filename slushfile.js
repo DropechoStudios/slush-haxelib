@@ -22,15 +22,14 @@ function format(string) {
     return username.replace(/\s/g, '');
 }
 
-var defaults = (function () {
+var defaults = (function() {
     var workingDirName = path.basename(process.cwd()),
-      homeDir, osUserName, configFile, user;
+        homeDir, osUserName, configFile, user;
 
     if (process.platform === 'win32') {
         homeDir = process.env.USERPROFILE;
         osUserName = process.env.USERNAME || path.basename(homeDir).toLowerCase();
-    }
-    else {
+    } else {
         homeDir = process.env.HOME || process.env.HOMEPATH;
         osUserName = homeDir && homeDir.split('/').pop() || 'root';
     }
@@ -50,7 +49,7 @@ var defaults = (function () {
     };
 })();
 
-gulp.task('default', function (done) {
+gulp.task('default', function(done) {
     var prompts = [{
         name: 'appName',
         message: 'What is the name of your project?',
@@ -78,7 +77,7 @@ gulp.task('default', function (done) {
         type: 'list',
         name: 'license',
         message: 'Choose your license type',
-        choices: ['MIT','BSD'],
+        choices: ['MIT', 'BSD'],
         default: 'MIT'
     }, {
         type: 'confirm',
@@ -87,14 +86,29 @@ gulp.task('default', function (done) {
     }];
     //Ask
     inquirer.prompt(prompts,
-        function (answers) {
+        function(answers) {
             if (!answers.moveon) {
                 return done();
             }
             answers.appNameSlug = _.slugify(answers.appName);
-            gulp.src(__dirname + '/templates/**')
+            var d = new Date();
+            answers.year = d.getFullYear();
+            var files = [__dirname + '/templates/**'];
+
+            if (answers.license === 'MIT') {
+                files.push('!' + __dirname + '/templates/LICENSE_BSD');
+            } else {
+                files.push('!' + __dirname + '/templates/LICENSE_MIT');
+            }
+
+            gulp.src(files)
                 .pipe(template(answers))
-                .pipe(rename(function (file) {
+                .pipe(rename(function(file) {
+                    if (answers.license === 'MIT') {
+                        file.basename = file.basename.replace('LICENSE_MIT', 'LICENSE');
+                    } else {
+                        file.basename = file.basename.replace('LICENSE_BSD', 'LICENSE');
+                    }
                     if (file.basename[0] === '_') {
                         file.basename = '.' + file.basename.slice(1);
                     }
@@ -102,7 +116,7 @@ gulp.task('default', function (done) {
                 .pipe(conflict('./'))
                 .pipe(gulp.dest('./'))
                 .pipe(install())
-                .on('end', function () {
+                .on('end', function() {
                     done();
                 });
         });

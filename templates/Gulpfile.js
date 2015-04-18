@@ -1,3 +1,4 @@
+'use strict';
 var gulp = require('gulp');
 var shell = require('gulp-shell');
 var mkdirp = require('mkdirp');
@@ -17,7 +18,7 @@ process.on('exit', function(err) {
 });
 
 gulp.task('create-bin', function() {
-    mkdirp('bin/js');
+    mkdirp('artifacts/js');
 });
 
 gulp.task('build-js', shell.task('haxe targets/js.hxml'));

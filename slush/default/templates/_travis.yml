@@ -13,4 +13,4 @@ before_script:
     - sudo apt-get update
     - sudo apt-get install haxe -y
     - sudo haxelib setup /usr/lib/haxe/lib
-    - sudo haxelib targets/test.hxml
+    - sudo haxelib install targets/test.hxml --always

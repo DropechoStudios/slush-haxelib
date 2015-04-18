@@ -42,7 +42,7 @@ function defaultTask(done) {
             //.pipe(conflict('./'))
             .pipe(gulp.dest('./'))
             .pipe(install())
-            .on('end', function() {
+            .on('finish', function() {
                 done();
             });
     }
@@ -50,4 +50,4 @@ function defaultTask(done) {
     inquirer.prompt(prompts, scaffold);
 }
 
-gulp.task('default', function(){});
+gulp.task('default', defaultTask);

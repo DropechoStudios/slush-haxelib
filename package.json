@@ -1,7 +1,7 @@
 {
   "name": "slush-haxelib",
   "description": "A generator for creating haxelib projects for both haxelib.org and npm.js",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "https://github.com/dropechostudios/slush-haxelib",
   "author": {
     "name": "Ben Van Treese",

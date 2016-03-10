@@ -2,9 +2,9 @@
     "name": "<%= appNameSlug %>",
     "url": "https://github.com/<%= userName %>/<%= appNameSlug %>",
     "license":"<%= license %>",
-    "tags": [""]
+    "tags": [""],
     "description": "<%= appDescription %>",
     "version": "<%= appVersion %>",
     "contributors": ["<%= authorName %>"],
-    "dependencies": {},
+    "dependencies": {}
 }

@@ -1,14 +1,11 @@
 language: haxe
+hxml:
+  - targets/js.hxml
+  - targets/test.hxml
 
-before_install:
-    - npm install
-    - yes | haxelib install targets/test.hxml
+script:
+  -haxelib run munit test -result-exit-code
 
-install: true
-
-script: gulp
-
-#whitelist only the master branch
 branches:
-    only:
-        - master
+  only:
+    - master

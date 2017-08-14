@@ -2,7 +2,7 @@
     "name": "<%= appNameSlug %>",
     "description": "<%= appDescription %>",
     "version": "<%= appVersion %>",
-    "homepage": "https://github.com/<%= userName %>/<%= appNameSlug %>",
+    "homepage": "<%= githubUrl %>",
     "author": {
         "name": "<%= authorName %>",
         "email": "<%= authorEmail %>"
@@ -12,23 +12,20 @@
         "url": "git://github.com/<%= userName %>/<%= appNameSlug %>.git"
     },
     "bugs": {
-        "url": "https://github.com/<%= userName %>/<%= appNameSlug %>/issues"
+        "url": "<%= githubUrl %>/issues"
     },
     "licenses": [{
         "type" : "<%= license %>",
-        "url" : "https://github.com/<% userName %>/<% appNameSlug %>/blob/master/LICENSE"
+        "url" : "<%= githubUrl %>/blob/master/LICENSE"
     }],
     "main": "artifacts/<%= appNameSlug %>.js",
     "scripts": {
-        "build": "gulp build",
-        "test": "gulp test"
+        "build": "haxe targets/js.hxml",
+        "test": "haxelib run munit test -result-exit-code"
     },
     "dependencies": {
     },
     "devDependencies": {
-        "gulp":"*",
-        "gulp-shell":"*",
-        "mkdirp":"*"
     },
     "keywords": [
         "slushgenerator"

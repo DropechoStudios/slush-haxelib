@@ -1,6 +1,6 @@
 {
     "name": "<%= appNameSlug %>",
-    "url": "https://github.com/<%= userName %>/<%= appNameSlug %>",
+    "url": "<%= githubUrl %>",
     "license":"<%= license %>",
     "tags": [""],
     "description": "<%= appDescription %>",
